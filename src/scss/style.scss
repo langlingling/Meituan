@@ -1,0 +1,52 @@
+@import "_minix.scss";
+@import "common.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+}
+
+header {
+    width: 100%;
+    height: pxTorem(40px);
+    background: #00c3b1;
+    @include box_flex;
+    @include justify(space-between);
+    @include align;
+    padding: 0 pxTorem(10px);
+    @include sizing;
+    p {
+        font-size: pxTorem(16px);
+        color: white;
+        @include box_flex;
+        @include align;
+        span.icon {
+            font-size: pxTorem(22px);
+        }
+    }
+    >span.icon {
+        font-size: pxTorem(22px);
+        color: white;
+    }
+    .form {
+        @include flex;
+        height: pxTorem(25px);
+        background: rgba(0, 0, 0, .2);
+        margin: 0 pxTorem(10px);
+        border-radius: pxTorem(4px);
+        @include box_flex;
+        @include align;
+        padding: 0 pxTorem(10px);
+        @include sizing;
+        >span.icon {
+            font-size: pxTorem(16px);
+            color: white;
+            margin-right: pxTorem(10px);
+        }
+        input {
+            font-size: pxTorem(13px);
+            color: #666;
+        }
+    }
+}
