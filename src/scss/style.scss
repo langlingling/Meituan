@@ -1,0 +1,94 @@
+@import "common.scss";
+@import "_minix.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    header {
+        width: 100%;
+        height: pxTorem(44px);
+        flex-shrink: 0;
+        background: red;
+    }
+    section {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        flex: 1;
+    }
+    footer {
+        width: 100%;
+        height: pxTorem(44px);
+        flex-shrink: 0;
+        background: red;
+    }
+}
+
+section {
+    padding: 0 pxTorem(10px);
+    @include sizing;
+    h2 {
+        width: 100%;
+        height: pxTorem(40px);
+        display: flex;
+        align-items: center;
+        font-size: pxTorem(17px);
+        border-bottom: solid 1px #ccc;
+    }
+    dl {
+        width: 100%;
+        height: pxTorem(110px);
+        display: flex;
+        border-bottom: solid 1px #ccc;
+        padding: pxTorem(10px) 0;
+        @include sizing;
+        dt {
+            width: pxTorem(100px);
+            height: 100%;
+            flex-shrink: 0;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        dd {
+            width: 100%;
+            height: 100%;
+            flex: 1;
+            margin-left: pxTorem(10px);
+            h1 {
+                width: 100%;
+                height: pxTorem(20px);
+                display: flex;
+                align-items: center;
+                font-size: pxTorem(15px);
+            }
+            div {
+                &:nth-child(2) {
+                    width: 100%;
+                    height: pxTorem(25px);
+                    display: flex;
+                    align-items: center;
+                    color: #ccc;
+                    font-size: pxTorem(13px);
+                }
+                &:nth-child(3) {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: pxTorem(30px);
+                    p {
+                        &:nth-child(1) {
+                            span {
+                                &:nth-child(1) {
+                                    color: #6fecce;
+                                    font-size: pxTorem(15px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
